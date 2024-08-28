@@ -1,8 +1,10 @@
+import java.sql.PreparedStatement;
+
 public class Main {
     public static void main(String[] args) {
 
-        Clients clients = new Clients();
-        clients.customerRegistration();
+       // Clients clients = new Clients();
+        //clients.customerRegistration();
 
     }
 }
