@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Clients {
@@ -5,6 +7,12 @@ public class Clients {
 
     private String name;
     private String telephone;
+    private String rg;
+    private String cpf;
+    private LocalDate birth;
+    private String gender;
+    private String address;
+
 
       public String getName(){
           return this.name;
@@ -22,21 +30,43 @@ public class Clients {
           this.telephone = telephone;
       }
 
-      void customerRegistration() {
-        Scanner getInfo = new Scanner(System.in);
+      public String getRg (){
+          return this.rg;
+      }
 
-        System.out.println("Please insert the client Name: ");
-        String nomeLocal = getInfo.nextLine();
-        setName(nomeLocal);
-        System.out.println("Name saved " + getName());
+      public void setRg (String rg) {
+          this.rg = rg;
+      }
 
-        System.out.println("Please insert the Telephone: ");
-        String telefoneLocal = getInfo.nextLine();
-        setTelephone(telefoneLocal);
-        System.out.println("Telephone saved " + getTelephone());
-
+    public String getCpf (){
+        return this.cpf;
     }
 
+    public void setCpf (String cpf) {
+        this.cpf = cpf;
+    }
 
+    public LocalDate getBirth (){
+        return this.birth;
+    }
 
+    public void setBirth (LocalDate birth) {
+        this.birth = birth;
+    }
+
+    public String getGender (){
+        return this.gender;
+    }
+
+    public void setGender (String gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress (){
+        return this.address;
+    }
+
+    public void setAddress (String address) {
+        this.address = address;
+    }
 }
