@@ -22,7 +22,7 @@ public class Clients {
           this.name = name;
       }
 
-       public String getTelephone (){
+      public String getTelephone (){
           return this.telephone;
       }
 
@@ -38,35 +38,35 @@ public class Clients {
           this.rg = rg;
       }
 
-    public String getCpf (){
+      public String getCpf (){
         return this.cpf;
-    }
+      }
 
-    public void setCpf (String cpf) {
+      public void setCpf (String cpf) {
         this.cpf = cpf;
-    }
+      }
 
-    public LocalDate getBirth (){
+      public LocalDate getBirth (){
         return this.birth;
-    }
+      }
 
-    public void setBirth (LocalDate birth) {
+      public void setBirth (LocalDate birth) {
         this.birth = birth;
-    }
+      }
 
-    public String getGender (){
+      public String getGender (){
         return this.gender;
-    }
+      }
 
-    public void setGender (String gender) {
+      public void setGender (String gender) {
         this.gender = gender;
-    }
+      }
 
-    public String getAddress (){
+      public String getAddress (){
         return this.address;
-    }
+      }
 
-    public void setAddress (String address) {
+      public void setAddress (String address) {
         this.address = address;
-    }
+      }
 }
