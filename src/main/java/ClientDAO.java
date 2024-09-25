@@ -1,7 +1,7 @@
+//DAO = DATA ACCESS OBJET
 import java.sql.*;
 
 public class ClientDAO {
-    //DAO = DATA ACCESS OBJET
     Connection connection = null;
     public void save(Clients client) {
         try {
@@ -22,5 +22,15 @@ public class ClientDAO {
             System.out.println("Ocorreu um erro ao acessar o banco " + ex.getMessage());
         }
 
+    }
+    public void delete () {
+
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/Bank", "postgres", "postgres");
+            PreparedStatement ps = connection.prepareStatement("DELETE FROM public.\"Clients\"");
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

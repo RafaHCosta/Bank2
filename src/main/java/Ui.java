@@ -8,11 +8,12 @@ public class Ui {
         ClientDAO clientDAO = new ClientDAO();
         Scanner getInfo = new Scanner(System.in);
 
-            System.out.println("1 - Custumer Registration / 2 - Delete Custumer / 3 - Custumer Research");
+            System.out.println("1 - Customer Registration\n2 - Delete Customer\n3 - Customer Research");
             Scanner getScreen = new Scanner(System.in);
             int firstscreenLocal = getScreen.nextInt();
 
             if (firstscreenLocal == 1) {
+                System.out.println("WELCOME TO CUSTOMER REGISTRATION");
                 System.out.println("Please insert the client Name: ");
                 String nameLocal = getInfo.nextLine();
                 client.setName(nameLocal);
@@ -50,10 +51,20 @@ public class Ui {
 
                 clientDAO.save(client);
             }
-            else if (firstscreenLocal == 2)
-                System.out.println("DELETE CUSTUMER");
+            else if (firstscreenLocal == 2) {
+                System.out.println("WELCOME TO DELETE CUSTOMER");
+                System.out.println("1 - Delete all files\n2 - Delete specific file");
+                Scanner getScreen1 = new Scanner(System.in);
+                int deletescreenLocal = getScreen1.nextInt();
+                    if (deletescreenLocal == 1) {
+                        clientDAO.delete();
+                        System.out.println("ALL FILES WAS DELETED");
+                        }
+                    else if (deletescreenLocal == 2)
+                        System.out.println("FILE DELETED");
+            }
 
             else if (firstscreenLocal == 3)
-                System.out.println("RESEARCH CUSTUMER");
+                System.out.println("WELCOME TO RESEARCH CUSTOMER");
         }
     }
