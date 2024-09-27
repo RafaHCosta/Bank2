@@ -64,7 +64,9 @@ public class Ui {
                         System.out.println("FILE DELETED");
             }
 
-            else if (firstscreenLocal == 3)
+            else if (firstscreenLocal == 3) {
                 System.out.println("WELCOME TO RESEARCH CUSTOMER");
+                clientDAO.research();
+            }
         }
     }
